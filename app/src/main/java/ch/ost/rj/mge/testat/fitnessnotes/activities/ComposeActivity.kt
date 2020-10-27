@@ -9,9 +9,13 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import ch.ost.rj.mge.testat.fitnessnotes.R
+import ch.ost.rj.mge.testat.fitnessnotes.model.Measurement
+import ch.ost.rj.mge.testat.fitnessnotes.model.MeasurementRepository
 import ch.ost.rj.mge.testat.fitnessnotes.services.InputVerificationService
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -22,7 +26,7 @@ class ComposeActivity : AppCompatActivity() {
 
     private var dateEditText: EditText? = null
     private var measurementEditText: EditText? = null
-    private var contentEditText: EditText? = null
+    private var notesEditText: EditText? = null
     private var addButton: Button? = null
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -60,9 +64,10 @@ class ComposeActivity : AppCompatActivity() {
                 updateAddButton()
             }
         })
-        contentEditText = findViewById(R.id.compose_edittext_content)
+        //measurementEditText!!.setText(measurementEditText!!.getText.toString() + extras!!.getString("measurement_unit"))
+        notesEditText = findViewById(R.id.compose_edittext_notes)
         addButton = findViewById(R.id.compose_button_add)
-        //addButton!!.setOnClickListener(View.OnClickListener { v: View? -> sendEmail() })
+        addButton!!.setOnClickListener(View.OnClickListener { v: View? -> confirmMeasurement() })
         updateAddButton()
     }
 
@@ -74,45 +79,18 @@ class ComposeActivity : AppCompatActivity() {
         addButton!!.setEnabled(buttonIsEnabled)
         addButton!!.setAlpha(buttonAlpha)
     }
-/*
-    private fun sendEmail() {
-        val email: Email = EmailRepository.addEmail(
-            fromEditText.getText().toString(),
-            toEditText.getText().toString(),
-            subjectEditText.getText().toString(),
-            contentEditText!!.text.toString()
+
+    private fun confirmMeasurement() {
+        val measurement: Measurement = MeasurementRepository.addMeasurement(
+            dateEditText!!.getText().toString(),
+            measurementEditText!!.getText().toString(),
+            notesEditText!!.getText().toString()
         )
-        val intent = Intent(Intent.ACTION_SENDTO)
-        intent.data = Uri.parse("mailto:") // only email apps should handle this
-        intent.putExtra(Intent.EXTRA_EMAIL, arrayOf<String>(email.to))
-        intent.putExtra(Intent.EXTRA_SUBJECT, email.subject)
-        intent.putExtra(Intent.EXTRA_TEXT, email.content)
-        if (intent.resolveActivity(packageManager) != null) {
-            VibrationService.vibrateSuccess()
-            if (!SKIP_EMAIL_INTENT) {
-                startActivity(intent)
-            }
-            finish()
-        } else {
-            VibrationService.vibrateError()
-            Toast.makeText(this, R.string.compose_no_email_app_found, Toast.LENGTH_LONG).show()
-        }
+        //VibrationService.vibrateSuccess()
+
+
+        Toast.makeText(this, "Measurement successfully added", Toast.LENGTH_LONG).show()
+
     }
 
-    companion object {
-        private const val DATE_KEY = "date"
-        private const val FULL_VISIBLE_ALPHA = 1.0f
-        private const val HALF_VISIBLE_ALPHA = 0.5f
-        fun createIntent(context: Context?, date: String?): Intent {
-            val intent = Intent(
-                context,
-                ComposeActivity::class.java
-            )
-            intent.putExtra(
-                DATE_KEY,
-                date
-            )
-            return intent
-        }
-    }*/
 }

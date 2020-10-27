@@ -10,7 +10,7 @@
         android:id="@+id/compose_date"
         android:layout_width="@dimen/width_of_labels_on_compose_screen"
         android:layout_height="wrap_content"
-        android:text="Date"
+        android:text="@string/date_text"
         android:labelFor="@id/compose_edit_date"
         style="@style/ComposeLabelText"
         app:layout_constraintBaseline_toBaselineOf="@+id/compose_edit_date"
@@ -34,7 +34,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/distance_between_controls_1x"
-        android:inputType="textEmailAddress"
+        android:inputType="date"
         android:enabled="false"
         android:importantForAutofill="no"
         style="@style/InputEditText"
@@ -47,7 +47,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/distance_between_controls_1x"
-        android:inputType="textEmailAddress"
+        android:inputType="numberDecimal"
         android:importantForAutofill="no"
         style="@style/InputEditText"
         app:layout_constraintEnd_toEndOf="@+id/compose_edit_date"
@@ -56,16 +56,16 @@
 
 
     <EditText
-        android:id="@+id/compose_edittext_content"
+        android:id="@+id/compose_edittext_notes"
+        style="@style/InputEditText"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/distance_between_controls_1x"
         android:layout_marginBottom="@dimen/distance_between_controls_1x"
         android:gravity="start|top"
         android:hint="@string/compose_content"
-        android:inputType="textMultiLine|textAutoComplete|textAutoCorrect"
         android:importantForAutofill="no"
-        style="@style/InputEditText"
+        android:inputType="textMultiLine|textAutoComplete|textAutoCorrect"
         app:layout_constraintBottom_toTopOf="@+id/compose_button_add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,9 +80,11 @@
         android:textSize="@dimen/button_text_size"
         app:cornerRadius="@dimen/rounded_button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/compose_edittext_content"
-        app:layout_constraintStart_toStartOf="@+id/compose_edittext_content"
+        app:layout_constraintEnd_toEndOf="@+id/compose_edittext_notes"
+        app:layout_constraintStart_toStartOf="@+id/compose_edittext_notes"
         android:backgroundTint="@color/colorSecondary"
         android:textColor="@color/colorOnSecondary"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,6 +25,7 @@ class MeasurementsFragment : Fragment() {
             val weightActivityIntent = Intent(root.context, MeasurementsActivity::class.java)
             weightActivityIntent.putExtra("myString", "How much do you weigh?")
             weightActivityIntent.putExtra("measurement_type", "Weight")
+            weightActivityIntent.putExtra("measurement_unit", "kg")
             startActivity(weightActivityIntent)
         }
 
@@ -33,6 +34,7 @@ class MeasurementsFragment : Fragment() {
             val weightActivityIntent = Intent(root.context, MeasurementsActivity::class.java)
             weightActivityIntent.putExtra("myString", "What is you chest circumference?")
             weightActivityIntent.putExtra("measurement_type", "Chest")
+            weightActivityIntent.putExtra("measurement_unit", "cm")
             startActivity(weightActivityIntent)
         }
 
