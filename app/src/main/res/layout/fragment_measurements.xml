@@ -22,12 +22,14 @@
 
     <Button
         android:id="@+id/buttonWeight"
+        style="@style/StandardText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/colorSecondary"
         android:text="@string/first_measurement"
         android:textColor="@color/colorOnSecondary"
         android:textSize="@dimen/button_text_size"
+        app:cornerRadius="@dimen/rounded_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -40,7 +42,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/second_measurement"
+        style="@style/StandardText"
         android:textSize="@dimen/button_text_size"
+        app:cornerRadius="@dimen/rounded_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -49,17 +53,4 @@
         app:layout_constraintVertical_bias="0.0"
         android:backgroundTint="@color/colorSecondary"
         android:textColor="@color/colorOnSecondary"/>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/outbox_fab_new"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/distance_between_controls_2x"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_measurements"
-        app:layout_constraintVertical_bias="0.712"
-        app:srcCompat="@drawable/ic_add_24dp"
-        app:tint="@color/colorOnPrimary"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

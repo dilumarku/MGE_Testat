@@ -6,10 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import ch.ost.rj.mge.testat.fitnessnotes.R
-import ch.ost.rj.mge.testat.fitnessnotes.activities.WeightActivity
+import ch.ost.rj.mge.testat.fitnessnotes.activities.MeasurementsActivity
 
 class MeasurementsFragment : Fragment() {
 
@@ -23,7 +22,7 @@ class MeasurementsFragment : Fragment() {
 
         val buttonWeight = root.findViewById<Button>(R.id.buttonWeight)
         buttonWeight.setOnClickListener {
-            val weightActivityIntent = Intent(root.context, WeightActivity::class.java)
+            val weightActivityIntent = Intent(root.context, MeasurementsActivity::class.java)
             weightActivityIntent.putExtra("myString", "How much do you weigh?")
             weightActivityIntent.putExtra("measurement_type", "Weight")
             startActivity(weightActivityIntent)
@@ -31,7 +30,7 @@ class MeasurementsFragment : Fragment() {
 
         val buttonChest = root.findViewById<Button>(R.id.buttonChest)
         buttonChest.setOnClickListener {
-            val weightActivityIntent = Intent(root.context, WeightActivity::class.java)
+            val weightActivityIntent = Intent(root.context, MeasurementsActivity::class.java)
             weightActivityIntent.putExtra("myString", "What is you chest circumference?")
             weightActivityIntent.putExtra("measurement_type", "Chest")
             startActivity(weightActivityIntent)
