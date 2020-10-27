@@ -12,20 +12,15 @@ import ch.ost.rj.mge.testat.fitnessnotes.R
 
 class WorkoutsFragment : Fragment() {
 
-    private lateinit var workoutsViewModel: WorkoutsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        workoutsViewModel =
-            ViewModelProviders.of(this).get(WorkoutsViewModel::class.java)
+
         val root = inflater.inflate(R.layout.fragment_workouts, container, false)
-        val textView: TextView = root.findViewById(R.id.text_workouts)
-        workoutsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+
         return root
     }
 }

@@ -16,7 +16,6 @@ import ch.ost.rj.mge.testat.fitnessnotes.R
 
 class HomeFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
     private val WEBSITE_URL = "https://github.com/dilumarku/MGE_Testat"
 
     override fun onCreateView(
@@ -24,14 +23,8 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-            ViewModelProviders.of(this).get(HomeViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
 
+        val root = inflater.inflate(R.layout.fragment_home, container, false)
         val urlTextView: TextView = root.findViewById(R.id.text_url)
         urlTextView.setOnClickListener { _ -> openUrl() }
         return root
