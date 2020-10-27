@@ -17,8 +17,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.MeasurementsActivity"
-            android:label="@string/title_measurements"></activity>
-        <activity android:name=".activities.ComposeActivity"></activity>
+            android:label="@string/title_measurements"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activities.ComposeActivity"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />

@@ -4,7 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import ch.ost.rj.mge.testat.fitnessnotes.model.Measurement
-
+/*
 @Dao
 interface MeasurementDao {
     @get:Query("SELECT * FROM measurementsT")
@@ -13,3 +13,4 @@ interface MeasurementDao {
     @Insert
     fun insert(measurement: Measurement?)
 }
+*/

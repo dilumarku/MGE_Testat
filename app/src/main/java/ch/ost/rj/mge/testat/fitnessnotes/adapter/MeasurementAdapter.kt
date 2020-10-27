@@ -10,7 +10,7 @@ import java.util.*
 
 
 
-class MeasurementAdapter : RecyclerView.Adapter<MeasurementViewHolder>() {
+class MeasurementAdapter(measurements: ArrayList<Measurement>?) : RecyclerView.Adapter<MeasurementViewHolder>() {
     private lateinit var measurements: List<Measurement>
     fun updateMeasurement(measurements: List<Measurement>) {
         this.measurements = measurements
@@ -41,6 +41,6 @@ class MeasurementAdapter : RecyclerView.Adapter<MeasurementViewHolder>() {
     }
 
     init {
-        measurements = ArrayList<Measurement>()
+        this.measurements = ArrayList<Measurement>()
     }
 }
