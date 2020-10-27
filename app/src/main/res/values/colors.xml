@@ -3,8 +3,8 @@
     <color name="colorPrimary">#2962ff</color>
     <color name="colorPrimaryVariant">#0039cb</color>
     <color name="colorOnPrimary">#FFFFFF</color>
-    <color name="colorSecondary">#29b6f6</color>
-    <color name="colorSecondaryVariant">#0086c3</color>
+    <color name="colorSecondary">#e0e0e0</color>
+    <color name="colorSecondaryVariant">#aeaeae</color>
     <color name="colorOnSecondary">#000000</color>
 
     <color name="backgroundColor">#FFFFFF</color>

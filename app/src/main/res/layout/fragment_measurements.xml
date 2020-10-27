@@ -24,16 +24,16 @@
         android:id="@+id/buttonWeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorSecondary"
         android:text="@string/first_measurement"
+        android:textColor="@color/colorOnSecondary"
         android:textSize="@dimen/button_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:backgroundTint="@color/colorSecondary"
-        android:textColor="@color/colorOnSecondary"/>
+        app:layout_constraintVertical_bias="0.02" />
 
     <Button
         android:id="@+id/buttonChest"

@@ -29,6 +29,14 @@ class MeasurementsFragment : Fragment() {
             startActivity(weightActivityIntent)
         }
 
+        val buttonChest = root.findViewById<Button>(R.id.buttonChest)
+        buttonChest.setOnClickListener {
+            val weightActivityIntent = Intent(root.context, WeightActivity::class.java)
+            weightActivityIntent.putExtra("myString", "What is you chest circumference?")
+            weightActivityIntent.putExtra("measurement_type", "Chest")
+            startActivity(weightActivityIntent)
+        }
+
         return root
     }
 
