@@ -6,4 +6,9 @@
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/title_home" />
 
+    <item
+        android:id="@+id/navigation_measurements"
+        android:icon="@drawable/ic_insert_chart_24dp"
+        android:title="@string/title_measurements" />
+
 </menu>

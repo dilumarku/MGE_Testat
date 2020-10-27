@@ -11,5 +11,10 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
+    <fragment
+        android:id="@+id/navigation_measurements"
+        android:name="ch.ost.rj.mge.testat.fitnessnotes.ui.measurements.MeasurementsFragment"
+        android:label="@string/title_measurements"
+        tools:layout="@layout/fragment_measurements" />
 
 </navigation>
