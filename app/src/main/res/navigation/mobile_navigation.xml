@@ -17,4 +17,11 @@
         android:label="@string/title_measurements"
         tools:layout="@layout/fragment_measurements" />
 
+    <fragment
+        android:id="@+id/navigation_workouts"
+        android:name="ch.ost.rj.mge.testat.fitnessnotes.ui.workouts.WorkoutsFragment"
+        android:label="@string/title_workouts"
+        tools:layout="@layout/fragment_workouts" />
+
+
 </navigation>
