@@ -16,10 +16,12 @@ class WeightActivity : AppCompatActivity() {
         val extras = intent.extras
         parameter = extras!!.getString("myString")
         textView = findViewById(R.id.textOutputWeight)
+        (this as AppCompatActivity).supportActionBar?.title = extras.getString("measurement_type")
     }
 
     override fun onResume() {
         super.onResume()
         textView!!.text = parameter
     }
+
 }
