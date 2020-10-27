@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import ch.ost.rj.mge.testat.fitnessnotes.R
-import ch.ost.rj.mge.testat.fitnessnotes.ui.home.HomeViewModel
 
 class WorkoutsFragment : Fragment() {
 
