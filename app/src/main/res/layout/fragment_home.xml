@@ -7,16 +7,6 @@
     tools:context=".ui.home.HomeFragment">
 
     <TextView
-        android:id="@+id/text_url"
-        style="@style/AppUrlText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/github_url"
-        app:layout_constraintEnd_toEndOf="@+id/app_title"
-        app:layout_constraintStart_toStartOf="@+id/app_title"
-        app:layout_constraintTop_toBottomOf="@+id/app_title" />
-
-    <TextView
         android:id="@+id/app_title"
         style="@style/AppTitleText"
         android:layout_width="wrap_content"
@@ -29,14 +19,25 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
+        android:id="@+id/text_url"
+        style="@style/AppUrlText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/github_url"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_title"
+        android:textAlignment="center"/>
+
+    <TextView
         android:id="@+id/text_home"
+        style="@style/StandardText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
-        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

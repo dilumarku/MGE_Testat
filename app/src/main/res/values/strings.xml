@@ -6,4 +6,6 @@
     <string name="github_url">&gt;&gt; GitHub Repository &lt;&lt; </string>
     <string name="first_measurement">Weight</string>
     <string name="second_measurement">Chest</string>
+    <string name="no_browser_app_found">No browser app was found</string>
+    <string name="show_text">Platzhalter</string>
 </resources>

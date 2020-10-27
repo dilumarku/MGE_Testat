@@ -1,5 +1,6 @@
 package ch.ost.rj.mge.testat.fitnessnotes.ui.measurements
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -26,6 +27,7 @@ class MeasurementsFragment : Fragment() {
         measurementsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+
         return root
     }
 }

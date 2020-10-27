@@ -7,10 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import ch.ost.rj.mge.testat.fitnessnotes.R
+
 
 class HomeFragment : Fragment() {
 
@@ -38,6 +40,11 @@ class HomeFragment : Fragment() {
     private fun openUrl() {
         val intent = Intent(Intent.ACTION_VIEW)
         intent.data = Uri.parse(WEBSITE_URL)
-        startActivity(intent)
+        val packageManager = activity!!.packageManager
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        } else {
+            Toast.makeText(this.context, R.string.no_browser_app_found, Toast.LENGTH_LONG).show()
+        }
     }
 }
