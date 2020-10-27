@@ -1,15 +1,14 @@
 package ch.ost.rj.mge.testat.fitnessnotes.ui.measurements
 
-import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Button
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import ch.ost.rj.mge.testat.fitnessnotes.R
+import ch.ost.rj.mge.testat.fitnessnotes.activities.WeightActivity
 
 class MeasurementsFragment : Fragment() {
 
@@ -20,6 +19,13 @@ class MeasurementsFragment : Fragment() {
     ): View? {
 
         val root = inflater.inflate(R.layout.fragment_measurements, container, false)
+
+        val buttonWeight = root.findViewById<Button>(R.id.buttonWeight)
+        buttonWeight.setOnClickListener {
+            val weightActivityIntent = Intent(root.context, WeightActivity::class.java)
+            weightActivityIntent.putExtra("myString", "How much do you weigh?")
+            startActivity(weightActivityIntent)
+        }
 
         return root
     }
