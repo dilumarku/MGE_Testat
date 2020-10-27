@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".activities.MeasurementsActivity"
             android:label="@string/title_measurements"></activity>
+        <activity android:name=".activities.ComposeActivity"></activity>
     </application>
+
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
 </manifest>

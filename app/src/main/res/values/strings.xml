@@ -8,4 +8,6 @@
     <string name="second_measurement">Chest</string>
     <string name="no_browser_app_found">No browser app was found</string>
     <string name="show_text">Platzhalter</string>
+    <string name="compose_content">Notes</string>
+    <string name="compose_add">Add measurement</string>
 </resources>
