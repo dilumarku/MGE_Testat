@@ -11,7 +11,7 @@ import java.util.*
 
 
 class MeasurementAdapter(measurements: ArrayList<Measurement>?) : RecyclerView.Adapter<MeasurementViewHolder>() {
-    private lateinit var measurements: List<Measurement>
+    private var measurements: List<Measurement>
     fun updateMeasurement(measurements: List<Measurement>) {
         this.measurements = measurements
         notifyDataSetChanged()

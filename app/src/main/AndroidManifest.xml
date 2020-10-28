@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.MeasurementsActivity"
+        <activity android:name=".activities.measurements.WeightActivity"
+            android:label="@string/title_measurements"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activities.measurements.ChestActivity"
             android:label="@string/title_measurements"
             android:screenOrientation="portrait">
         </activity>
