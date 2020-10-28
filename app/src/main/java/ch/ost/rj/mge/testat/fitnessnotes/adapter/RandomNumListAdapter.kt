@@ -1,19 +1,17 @@
 package ch.ost.rj.mge.testat.fitnessnotes.adapter
 
-import android.R
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import ch.ost.rj.mge.testat.fitnessnotes.ui.workouts.RecyclerViewHolder
 import java.lang.String
-import java.util.*
 import kotlin.random.Random
-
+/*
 
 class RandomNumListAdapter(seed: Int) :
     RecyclerView.Adapter<RecyclerViewHolder>() {
-    private val random: Random
+    private val random: Random = Random(seed)
+
 
     override fun getItemViewType(position: Int): Int {
         return 1
@@ -21,6 +19,7 @@ class RandomNumListAdapter(seed: Int) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(viewType, parent, false)
+
         return RecyclerViewHolder(view)
     }
 
@@ -32,7 +31,4 @@ class RandomNumListAdapter(seed: Int) :
         return 100
     }
 
-    init {
-        random = Random(seed)
-    }
-}
+}*/

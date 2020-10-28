@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ch.ost.rj.mge.testat.fitnessnotes.R
-import ch.ost.rj.mge.testat.fitnessnotes.adapter.RandomNumListAdapter
 
 class WorkoutsFragment : Fragment() {
 
@@ -23,11 +22,6 @@ class WorkoutsFragment : Fragment() {
 
 
         val view = inflater.inflate(R.layout.fragment_workouts, container, false)
-
-        recyclerView = view.findViewById(R.id.workouts_recyclerview);
-        recyclerView!!.setHasFixedSize(true);
-        recyclerView!!.layoutManager = LinearLayoutManager(view.context)
-        recyclerView!!.adapter = RandomNumListAdapter(1234)
 
         return view
     }
