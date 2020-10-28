@@ -1,4 +1,4 @@
-package ch.ost.rj.mge.testat.fitnessnotes.ui.workouts
+package ch.ost.rj.mge.testat.fitnessnotes.fragments
 
 
 import android.os.Bundle

@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="ch.ost.rj.mge.testat.fitnessnotes.ui.home.HomeFragment"
+        android:name="ch.ost.rj.mge.testat.fitnessnotes.fragments.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_measurements"
-        android:name="ch.ost.rj.mge.testat.fitnessnotes.ui.measurements.MeasurementsFragment"
+        android:name="ch.ost.rj.mge.testat.fitnessnotes.fragments.MeasurementsFragment"
         android:label="@string/title_measurements"
         tools:layout="@layout/fragment_measurements" />
 
     <fragment
         android:id="@+id/navigation_workouts"
-        android:name="ch.ost.rj.mge.testat.fitnessnotes.ui.workouts.WorkoutsFragment"
+        android:name="ch.ost.rj.mge.testat.fitnessnotes.fragments.WorkoutsFragment"
         android:label="@string/title_workouts"
         tools:layout="@layout/fragment_workouts" />
 

@@ -37,6 +37,8 @@ class ComposeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_compose)
 
+        (this as AppCompatActivity).supportActionBar?.title = "Please enter your current weight"
+
         dateEditText = compose_edit_date
         dateEditText.setText(currentDate)
         measurementEditText = compose_edit_measurement
@@ -61,7 +63,7 @@ class ComposeActivity : AppCompatActivity() {
                 updateAddButton()
             }
         })
-        //measurementEditText!!.setText(measurementEditText!!.getText.toString() + extras!!.getString("measurement_unit"))
+
         notesEditText = compose_edittext_notes
         addButton = compose_button_add
         addButton.setOnClickListener(View.OnClickListener { v: View? -> confirmMeasurement()})
@@ -81,7 +83,7 @@ class ComposeActivity : AppCompatActivity() {
     private fun confirmMeasurement() {
         val measurement = Measurement(
             dateEditText.text.toString(),
-            measurementEditText.text.toString(),
+            measurementEditText.text.toString() + " kg",
             notesEditText.text.toString()
         )
         //VibrationService.vibrateSuccess()

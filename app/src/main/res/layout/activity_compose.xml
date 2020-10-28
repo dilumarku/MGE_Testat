@@ -21,7 +21,7 @@
         android:id="@+id/compose_measurement"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/show_text"
+        android:text="@string/weight_measurement"
         android:labelFor="@id/compose_edit_measurement"
         style="@style/ComposeLabelText"
         app:layout_constraintBaseline_toBaselineOf="@+id/compose_edit_measurement"

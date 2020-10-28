@@ -1,6 +1,5 @@
 package ch.ost.rj.mge.testat.fitnessnotes.activities.measurements
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -19,11 +18,9 @@ class WeightActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_measurements)
+        setContentView(R.layout.activity_weight)
 
-        val extras = this.intent.extras
-
-        (this as AppCompatActivity).supportActionBar?.title = extras!!.getString("measurement_type")
+        (this as AppCompatActivity).supportActionBar?.title = "Track your weight"
 
         val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(this)
         adapter = MeasurementAdapter(MeasurementRepository.measurements)
@@ -37,9 +34,7 @@ class WeightActivity : AppCompatActivity() {
 
         val fab = findViewById<FloatingActionButton>(R.id.measurement_fab_new)
         fab.setOnClickListener {
-            val composeActivityIntent = Intent(this, ComposeActivity::class.java)
-            composeActivityIntent.putExtras(extras)
-            startActivity(composeActivityIntent)
+            startActivity(Intent(this, ComposeActivity::class.java))
         }
     }
 

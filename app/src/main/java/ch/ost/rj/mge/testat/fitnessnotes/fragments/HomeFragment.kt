@@ -1,4 +1,4 @@
-package ch.ost.rj.mge.testat.fitnessnotes.ui.home
+package ch.ost.rj.mge.testat.fitnessnotes.fragments
 
 import android.content.Intent
 import android.net.Uri
