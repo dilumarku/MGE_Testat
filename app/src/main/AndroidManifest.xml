@@ -17,17 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.measurements.WeightActivity"
-            android:label="@string/title_measurements"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".activities.measurements.ChestActivity"
-            android:label="@string/title_measurements"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity android:name=".activities.ComposeActivity"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
     </application>
 
-    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
 </manifest>

@@ -1,21 +1,34 @@
 package ch.ost.rj.mge.testat.fitnessnotes.ui.workouts
 
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import ch.ost.rj.mge.testat.fitnessnotes.R
+import ch.ost.rj.mge.testat.fitnessnotes.adapter.RandomNumListAdapter
 
 class WorkoutsFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater,
+    private var recyclerView: RecyclerView? = null
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        val root = inflater.inflate(R.layout.fragment_workouts, container, false)
 
-        return root
+        val view = inflater.inflate(R.layout.fragment_workouts, container, false)
+
+        recyclerView = view.findViewById(R.id.workouts_recyclerview);
+        recyclerView!!.setHasFixedSize(true);
+        recyclerView!!.layoutManager = LinearLayoutManager(view.context)
+        recyclerView!!.adapter = RandomNumListAdapter(1234)
+
+        return view
     }
 }

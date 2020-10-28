@@ -1,5 +1,6 @@
 package ch.ost.rj.mge.testat.fitnessnotes.activities.measurements
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -14,15 +15,15 @@ import ch.ost.rj.mge.testat.fitnessnotes.model.MeasurementRepository
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class WeightActivity : AppCompatActivity() {
-    var adapter: RecyclerView.Adapter<MeasurementViewHolder>? = null
+    lateinit var adapter: RecyclerView.Adapter<MeasurementViewHolder>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_measurements)
 
-        //val extras = this.intent.extras
+        val extras = this.intent.extras
 
-        //(this as AppCompatActivity).supportActionBar?.title = extras!!.getString("measurement_type")
+        (this as AppCompatActivity).supportActionBar?.title = extras!!.getString("measurement_type")
 
         val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(this)
         adapter = MeasurementAdapter(MeasurementRepository.getMeasurements())
@@ -37,7 +38,7 @@ class WeightActivity : AppCompatActivity() {
         val fab = findViewById<FloatingActionButton>(R.id.measurement_fab_new)
         fab.setOnClickListener {
             val composeActivityIntent = Intent(this, ComposeActivity::class.java)
-            //composeActivityIntent.putExtras(extras)
+            composeActivityIntent.putExtras(extras)
             startActivity(composeActivityIntent)
         }
     }

@@ -1,6 +1,8 @@
 package ch.ost.rj.mge.testat.fitnessnotes.activities
 
 
+import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.text.Editable
@@ -36,8 +38,8 @@ class ComposeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_compose)
 
-       // val extras = this.intent.extras
-       // (this as AppCompatActivity).supportActionBar?.title = extras!!.getString("measurement_type")
+        val extras = this.intent.extras
+        (this as AppCompatActivity).supportActionBar?.title = extras!!.getString("measurement_type")
 
         dateEditText = compose_edit_date
         dateEditText!!.setText(currentDate)

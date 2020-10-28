@@ -20,9 +20,9 @@ class ChestActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_measurements)
 
-        //val extras = this.intent.extras
+        val extras = this.intent.extras
 
-        //(this as AppCompatActivity).supportActionBar?.title = extras!!.getString("measurement_type")
+        (this as AppCompatActivity).supportActionBar?.title = extras!!.getString("measurement_type")
 
         val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(this)
         adapter = MeasurementAdapter(MeasurementRepository.getMeasurements())
@@ -37,7 +37,7 @@ class ChestActivity: AppCompatActivity() {
         val fab = findViewById<FloatingActionButton>(R.id.measurement_fab_new)
         fab.setOnClickListener {
             val composeActivityIntent = Intent(this, ComposeActivity::class.java)
-            //composeActivityIntent.putExtras(extras)
+            composeActivityIntent.putExtras(extras)
             startActivity(composeActivityIntent)
         }
     }

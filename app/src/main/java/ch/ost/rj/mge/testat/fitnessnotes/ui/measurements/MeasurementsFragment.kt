@@ -29,7 +29,7 @@ class MeasurementsFragment : Fragment() {
             weightActivityIntent.putExtra("measurement_unit", "kg")
             startActivity(weightActivityIntent)
         }
-
+/*
         val buttonChest = root.findViewById<Button>(R.id.buttonChest)
         buttonChest.setOnClickListener {
             val weightActivityIntent = Intent(root.context, ChestActivity::class.java)
@@ -37,7 +37,7 @@ class MeasurementsFragment : Fragment() {
             weightActivityIntent.putExtra("measurement_type", "Chest")
             weightActivityIntent.putExtra("measurement_unit", "cm")
             startActivity(weightActivityIntent)
-        }
+        }*/
 
         return root
     }
