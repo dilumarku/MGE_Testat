@@ -9,17 +9,16 @@
 
     <TextView
         android:id="@+id/compose_date"
-        android:layout_width="@dimen/width_of_labels_on_compose_screen"
-        android:layout_height="wrap_content"
-        android:text="@string/date_text"
-        android:labelFor="@id/compose_edit_date"
         style="@style/ComposeLabelText"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/compose_edit_date"
+        android:text="@string/date_text"
+        android:textAlignment="viewStart"
         app:layout_constraintBaseline_toBaselineOf="@+id/compose_edit_date"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/compose_measurement"
-        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/weight_measurement"
         android:labelFor="@id/compose_edit_measurement"
@@ -61,8 +60,6 @@
         style="@style/InputEditText"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/distance_between_controls_1x"
-        android:layout_marginBottom="@dimen/distance_between_controls_1x"
         android:gravity="start|top"
         android:hint="@string/compose_content"
         android:importantForAutofill="no"

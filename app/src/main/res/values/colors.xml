@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#4dd0e1</color>
-    <color name="colorPrimaryVariant">#009faf</color>
-    <color name="colorOnPrimary">#FFFFFF</color>
-    <color name="colorSecondary">#000000</color>
-    <color name="colorSecondaryVariant">#212121</color>
-    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorPrimaryDay">#4dd0e1</color>
+    <color name="colorPrimaryVariantDay">#009faf</color>
+    <color name="colorOnPrimaryDay">#FFFFFF</color>
+    <color name="colorSecondaryDay">#000000</color>
+    <color name="colorSecondaryVariantDay">#212121</color>
+    <color name="colorOnSecondaryDay">#FFFFFF</color>
 
-    <color name="backgroundColor">#FFFFFF</color>
-    <color name="textColor">#222222</color>
+    <color name="backgroundColorDay">#FFFFFF</color>
+    <color name="textColorDay">#222222</color>
+
+    <color name="colorPrimaryNight">#212121</color>
+    <color name="colorPrimaryVariantNight">#000000</color>
+    <color name="colorOnPrimaryNight">#FFFFFF</color>
+    <color name="colorSecondaryNight">#000000</color>
+    <color name="colorSecondaryVariantNight">#212121</color>
+    <color name="colorOnSecondaryNight">#FFFFFF</color>
+
+    <color name="backgroundColorNight">#3f3f3f</color>
+    <color name="textColorNight">#FFFFFF</color>
 </resources>
