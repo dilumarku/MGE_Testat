@@ -77,14 +77,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/compose_add"
-        style="@style/StandardText"
-        android:textSize="@dimen/button_text_size"
-        app:cornerRadius="@dimen/rounded_button"
+        style="@style/BigButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/compose_edittext_notes"
-        app:layout_constraintStart_toStartOf="@+id/compose_edittext_notes"
-        android:backgroundTint="@color/colorSecondary"
-        android:textColor="@color/colorOnSecondary"/>
+        app:layout_constraintStart_toStartOf="@+id/compose_edittext_notes"/>
 
 
 

@@ -16,10 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.measurements.WeightActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".activities.ComposeActivity"
-            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.measurements.WeightActivity"/>
+        <activity android:name=".activities.ComposeActivity"/>
 
     </application>
 

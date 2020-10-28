@@ -17,20 +17,23 @@
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline3</item>
     </style>
 
-    <style name="AppVersionText">
-        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Caption</item>
-    </style>
-
     <style name="AppUrlText">
-        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle2</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="StandardText">
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
-    <style name="ButtonText">
+    <style name="BigButton">
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline6</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="backgroundTint">@color/colorSecondary</item>
+        <item name="android:textColor">@color/colorOnSecondary</item>"
+        <item name="android:layout_margin">24dp</item>
     </style>
 
     <style name="ComposeLabelText">

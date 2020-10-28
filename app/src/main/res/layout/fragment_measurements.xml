@@ -9,14 +9,10 @@
 
     <Button
         android:id="@+id/buttonWeight"
-        style="@style/StandardText"
+        style="@style/BigButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorSecondary"
         android:text="@string/first_measurement"
-        android:textColor="@color/colorOnSecondary"
-        android:textSize="@dimen/button_text_size"
-        app:cornerRadius="@dimen/rounded_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -33,7 +29,6 @@
         android:layout_marginEnd="8dp"
         android:text="@string/sample_text"
         android:textAlignment="center"
-        android:textSize="20sp"
         style="@style/StandardText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -53,11 +48,9 @@
 
     <TextView
         android:id="@+id/textView"
-        android:textSize="20sp"
         style="@style/StandardText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"

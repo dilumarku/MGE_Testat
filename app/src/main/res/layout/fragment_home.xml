@@ -30,7 +30,7 @@
         android:textAlignment="center"/>
 
     <TextView
-        android:id="@+id/text_home"
+        android:id="@+id/text_home_fragment"
         style="@style/StandardText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
