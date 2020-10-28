@@ -7,9 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import ch.ost.rj.mge.testat.fitnessnotes.R
 import ch.ost.rj.mge.testat.fitnessnotes.activities.measurements.ChestActivity
 import ch.ost.rj.mge.testat.fitnessnotes.activities.measurements.WeightActivity
+import androidx.recyclerview.widget.RecyclerView
+import ch.ost.rj.mge.testat.fitnessnotes.adapter.MeasurementAdapter
+import ch.ost.rj.mge.testat.fitnessnotes.model.MeasurementRepository
+import kotlinx.android.synthetic.main.fragment_workouts.*
 
 class MeasurementsFragment : Fragment() {
 
@@ -41,5 +46,6 @@ class MeasurementsFragment : Fragment() {
 
         return root
     }
+    
 
 }

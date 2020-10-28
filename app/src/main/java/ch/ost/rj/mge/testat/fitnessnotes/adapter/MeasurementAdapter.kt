@@ -12,6 +12,11 @@ import java.util.*
 
 class MeasurementAdapter(measurements: ArrayList<Measurement>?) : RecyclerView.Adapter<MeasurementViewHolder>() {
     private var measurements: List<Measurement>
+
+    init {
+        this.measurements = ArrayList<Measurement>()
+    }
+
     fun updateMeasurement(measurements: List<Measurement>) {
         this.measurements = measurements
         notifyDataSetChanged()
@@ -40,7 +45,5 @@ class MeasurementAdapter(measurements: ArrayList<Measurement>?) : RecyclerView.A
         return measurements.size
     }
 
-    init {
-        this.measurements = ArrayList<Measurement>()
-    }
+
 }
