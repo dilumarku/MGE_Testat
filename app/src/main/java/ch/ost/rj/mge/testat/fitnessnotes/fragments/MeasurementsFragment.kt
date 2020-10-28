@@ -33,15 +33,16 @@ class MeasurementsFragment : Fragment() {
         root.textView.setText("Click on a date to track your weight on that day")
 
         val simpleCalendarView = root.calendarView
+        var formatter = DateTimeFormatter.ofPattern("dd-MMMM-yyyy")
 
-        simpleCalendarView.setOnDateChangeListener { view, year, month, dayOfMonth -> // display the selected date by using a toast
-            var selectedDate = LocalDate.parse("$year-$month-$dayOfMonth", DateTimeFormatter.ofPattern("dd-MMMM-yyyy"))
+        simpleCalendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
+            var selectedDate = LocalDate.of(year, month+1, dayOfMonth).format(formatter)
             val intent = Intent(root.context, WeightActivity::class.java)
             intent.putExtra("date", selectedDate)
             startActivity(intent)
         }
 
-        val currentDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MMMM-yyyy"))
+        val currentDate = LocalDateTime.now().format(formatter)
 
         val buttonWeight = root.findViewById<Button>(R.id.buttonWeight)
         buttonWeight.setOnClickListener {
