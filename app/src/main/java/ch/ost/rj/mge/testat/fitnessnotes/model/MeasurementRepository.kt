@@ -14,8 +14,8 @@ object MeasurementRepository {
         measurements = ArrayList()
         measurements.add(
             Measurement(
-                "2020-10-04",
-                "100",
+                "04-October-2020",
+                "100 kg",
                 "Testnachricht ohne Inhalt"
             )
         )

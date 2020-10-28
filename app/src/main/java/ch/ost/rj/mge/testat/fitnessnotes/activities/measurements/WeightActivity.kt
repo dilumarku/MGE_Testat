@@ -12,6 +12,7 @@ import ch.ost.rj.mge.testat.fitnessnotes.adapter.MeasurementAdapter
 import ch.ost.rj.mge.testat.fitnessnotes.adapter.MeasurementViewHolder
 import ch.ost.rj.mge.testat.fitnessnotes.model.MeasurementRepository
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.android.synthetic.main.activity_weight.*
 
 class WeightActivity : AppCompatActivity() {
     lateinit var adapter: RecyclerView.Adapter<MeasurementViewHolder>
@@ -21,6 +22,10 @@ class WeightActivity : AppCompatActivity() {
         setContentView(R.layout.activity_weight)
 
         (this as AppCompatActivity).supportActionBar?.title = "Track your weight"
+
+        val extras = this.intent.extras
+
+        this.picked_date.setText("You picked the date "+ extras!!.getString("date"))
 
         val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(this)
         adapter = MeasurementAdapter(MeasurementRepository.measurements)
@@ -34,7 +39,11 @@ class WeightActivity : AppCompatActivity() {
 
         val fab = findViewById<FloatingActionButton>(R.id.measurement_fab_new)
         fab.setOnClickListener {
-            startActivity(Intent(this, ComposeActivity::class.java))
+            val intent = Intent(this, ComposeActivity::class.java)
+            if (extras != null) {
+                intent.putExtras(extras)
+            }
+            startActivity(intent)
         }
     }
 

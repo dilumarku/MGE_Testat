@@ -29,18 +29,16 @@ class ComposeActivity : AppCompatActivity() {
     private lateinit var notesEditText: EditText
     private lateinit var addButton: Button
 
-    @RequiresApi(Build.VERSION_CODES.O)
-    private val currentDate = LocalDateTime.now().format(DateTimeFormatter.ISO_DATE)
-
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_compose)
 
         (this as AppCompatActivity).supportActionBar?.title = "Please enter your current weight"
 
+        val extras = this.intent.extras
+
         dateEditText = compose_edit_date
-        dateEditText.setText(currentDate)
+        dateEditText.setText(extras!!.getString("date"))
         measurementEditText = compose_edit_measurement
         measurementEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(
