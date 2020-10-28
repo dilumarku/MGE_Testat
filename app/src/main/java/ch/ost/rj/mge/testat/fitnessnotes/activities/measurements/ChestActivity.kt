@@ -25,7 +25,7 @@ class ChestActivity: AppCompatActivity() {
         (this as AppCompatActivity).supportActionBar?.title = extras!!.getString("measurement_type")
 
         val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(this)
-        adapter = MeasurementAdapter(MeasurementRepository.getMeasurements())
+        adapter = MeasurementAdapter(MeasurementRepository.measurements)
         val dividerItemDecoration =
             DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
 

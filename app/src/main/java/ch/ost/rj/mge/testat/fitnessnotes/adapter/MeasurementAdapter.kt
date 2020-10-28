@@ -6,21 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import ch.ost.rj.mge.testat.fitnessnotes.model.Measurement
-import java.util.*
 
-
-
-class MeasurementAdapter(measurements: ArrayList<Measurement>?) : RecyclerView.Adapter<MeasurementViewHolder>() {
-    private var measurements: List<Measurement>
-
-    init {
-        this.measurements = ArrayList<Measurement>()
-    }
-
-    fun updateMeasurement(measurements: List<Measurement>) {
-        this.measurements = measurements
-        notifyDataSetChanged()
-    }
+class MeasurementAdapter(measurements: ArrayList<Measurement>) :
+    RecyclerView.Adapter<MeasurementViewHolder>() {
+    private var measurements: ArrayList<Measurement>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MeasurementViewHolder {
         val context = parent.context
@@ -38,12 +27,17 @@ class MeasurementAdapter(measurements: ArrayList<Measurement>?) : RecyclerView.A
     override fun onBindViewHolder(holder: MeasurementViewHolder, position: Int) {
         val meas: Measurement = measurements[position]
         holder.dateTextView.setText(meas.date)
-        holder.measurementTextView.setText(meas.measurement)
+        holder.measurementTextView.setText(meas.measure)
     }
 
     override fun getItemCount(): Int {
         return measurements.size
     }
 
+    init {
+        this.measurements = measurements
+    }
+
 
 }
+

@@ -1,8 +1,6 @@
 package ch.ost.rj.mge.testat.fitnessnotes.activities
 
 
-import android.content.Context
-import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.text.Editable
@@ -18,6 +16,7 @@ import ch.ost.rj.mge.testat.fitnessnotes.model.Measurement
 import ch.ost.rj.mge.testat.fitnessnotes.model.MeasurementRepository
 import ch.ost.rj.mge.testat.fitnessnotes.services.InputVerificationService
 import kotlinx.android.synthetic.main.activity_compose.*
+
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
@@ -25,10 +24,10 @@ class ComposeActivity : AppCompatActivity() {
     private val FULL_VISIBLE_ALPHA = 1.0f
     private val HALF_VISIBLE_ALPHA = 0.5f
 
-    private var dateEditText: EditText? = null
-    private var measurementEditText: EditText? = null
-    private var notesEditText: EditText? = null
-    private var addButton: Button? = null
+    private lateinit var dateEditText: EditText
+    private lateinit var measurementEditText: EditText
+    private lateinit var notesEditText: EditText
+    private lateinit var addButton: Button
 
     @RequiresApi(Build.VERSION_CODES.O)
     private val currentDate = LocalDateTime.now().format(DateTimeFormatter.ISO_DATE)
@@ -38,13 +37,10 @@ class ComposeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_compose)
 
-        val extras = this.intent.extras
-        (this as AppCompatActivity).supportActionBar?.title = extras!!.getString("measurement_type")
-
         dateEditText = compose_edit_date
-        dateEditText!!.setText(currentDate)
+        dateEditText.setText(currentDate)
         measurementEditText = compose_edit_measurement
-        measurementEditText!!.addTextChangedListener(object : TextWatcher {
+        measurementEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(
                 charSequence: CharSequence,
                 i: Int,
@@ -68,7 +64,7 @@ class ComposeActivity : AppCompatActivity() {
         //measurementEditText!!.setText(measurementEditText!!.getText.toString() + extras!!.getString("measurement_unit"))
         notesEditText = compose_edittext_notes
         addButton = compose_button_add
-        addButton!!.setOnClickListener(View.OnClickListener { v: View? -> confirmMeasurement()})
+        addButton.setOnClickListener(View.OnClickListener { v: View? -> confirmMeasurement()})
 
         updateAddButton()
     }
@@ -78,18 +74,17 @@ class ComposeActivity : AppCompatActivity() {
         val buttonIsEnabled = !toHasError
         val buttonAlpha =
             if (buttonIsEnabled) FULL_VISIBLE_ALPHA else HALF_VISIBLE_ALPHA
-        addButton!!.setEnabled(buttonIsEnabled)
-        addButton!!.setAlpha(buttonAlpha)
+        addButton.setEnabled(buttonIsEnabled)
+        addButton.setAlpha(buttonAlpha)
     }
 
     private fun confirmMeasurement() {
         val measurement = Measurement(
-            dateEditText!!.text.toString(),
-            measurementEditText!!.text.toString(),
-            notesEditText!!.text.toString()
+            dateEditText.text.toString(),
+            measurementEditText.text.toString(),
+            notesEditText.text.toString()
         )
         //VibrationService.vibrateSuccess()
-
         MeasurementRepository.addMeasurement(measurement)
         finish()
         Toast.makeText(this, "Measurement successfully added", Toast.LENGTH_LONG).show()

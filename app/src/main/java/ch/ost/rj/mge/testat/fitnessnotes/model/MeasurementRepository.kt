@@ -1,15 +1,18 @@
 package ch.ost.rj.mge.testat.fitnessnotes.model
 
-
 import java.util.*
 
 
 object MeasurementRepository {
-    private var measurements: ArrayList<Measurement>? = null
+    lateinit var measurements: ArrayList<Measurement>
+
+    fun addMeasurement(measurement: Measurement){
+        this.measurements.add(measurement)
+    }
 
     init {
-        measurements = ArrayList<Measurement>()
-        measurements!!.add(
+        measurements = ArrayList()
+        measurements.add(
             Measurement(
                 "2020-10-04",
                 "100",
@@ -17,14 +20,5 @@ object MeasurementRepository {
             )
         )
     }
-
-    fun getMeasurements(): ArrayList<Measurement>? {
-        return measurements
-    }
-
-    fun addMeasurement(measurement: Measurement) {
-        measurements!!.add(measurement)
-    }
-
 
 }
