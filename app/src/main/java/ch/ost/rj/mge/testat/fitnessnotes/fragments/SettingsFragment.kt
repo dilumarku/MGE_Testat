@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ch.ost.rj.mge.testat.fitnessnotes.R
 
-class WorkoutsFragment : Fragment() {
+class SettingsFragment : Fragment() {
 
     private var recyclerView: RecyclerView? = null
 

@@ -7,11 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import ch.ost.rj.mge.testat.fitnessnotes.R
-import ch.ost.rj.mge.testat.fitnessnotes.activities.measurements.WeightActivity
+import ch.ost.rj.mge.testat.fitnessnotes.activities.WeightActivity
 import kotlinx.android.synthetic.main.fragment_measurements.view.*
 import java.time.LocalDate
 import java.time.LocalDateTime

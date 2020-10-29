@@ -1,4 +1,4 @@
-package ch.ost.rj.mge.testat.fitnessnotes.activities.measurements
+package ch.ost.rj.mge.testat.fitnessnotes.activities
 
 import android.content.Intent
 import android.os.Bundle

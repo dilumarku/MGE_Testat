@@ -1,7 +1,5 @@
 package ch.ost.rj.mge.testat.fitnessnotes.activities
 
-
-import android.os.Build
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -9,16 +7,12 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import ch.ost.rj.mge.testat.fitnessnotes.R
 import ch.ost.rj.mge.testat.fitnessnotes.model.Measurement
 import ch.ost.rj.mge.testat.fitnessnotes.model.MeasurementRepository
 import ch.ost.rj.mge.testat.fitnessnotes.services.InputVerificationService
 import kotlinx.android.synthetic.main.activity_compose.*
-
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 
 class ComposeActivity : AppCompatActivity() {
     private val FULL_VISIBLE_ALPHA = 1.0f
@@ -39,6 +33,7 @@ class ComposeActivity : AppCompatActivity() {
 
         dateEditText = compose_edit_date
         dateEditText.setText(extras!!.getString("date"))
+
         measurementEditText = compose_edit_measurement
         measurementEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(
@@ -48,7 +43,6 @@ class ComposeActivity : AppCompatActivity() {
                 i2: Int
             ) {
             }
-
             override fun onTextChanged(
                 charSequence: CharSequence,
                 i: Int,
@@ -56,13 +50,13 @@ class ComposeActivity : AppCompatActivity() {
                 i2: Int
             ) {
             }
-
             override fun afterTextChanged(editable: Editable) {
                 updateAddButton()
             }
         })
 
         notesEditText = compose_edittext_notes
+
         addButton = compose_button_add
         addButton.setOnClickListener(View.OnClickListener { v: View? -> confirmMeasurement()})
 

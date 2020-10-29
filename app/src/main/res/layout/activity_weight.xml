@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/distance_from_layout_to_content"
-    tools:context=".activities.measurements.WeightActivity">
+    tools:context=".activities.WeightActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/measurement_items"
