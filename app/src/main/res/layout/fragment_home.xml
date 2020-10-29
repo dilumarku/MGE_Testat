@@ -29,5 +29,54 @@
         app:layout_constraintTop_toBottomOf="@+id/app_title"
         android:textAlignment="center"/>
 
+    <View
+        android:id="@+id/divider_home"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginHorizontal="@dimen/distance_between_controls_2x"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_url" />
+
+    <TextView
+        android:id="@+id/text_settings"
+        style="@style/StandardText"
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quick Settings"
+        app:layout_constraintTop_toBottomOf="@id/divider_home" />
+
+    <Switch
+        android:id="@+id/dark_mode_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:scaleX="5"
+        android:scaleY="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_settings" />
+
+    <TextView
+        android:id="@+id/text_switch"
+        style="@style/StandardText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dark Theme"
+
+        app:layout_constraintTop_toBottomOf="@id/dark_mode_switch"
+        android:layout_marginTop="50dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        style="@style/BigButton"
+        android:id="@+id/contact_button"
+        android:text="Contact developer"
+        app:layout_constraintBottom_toTopOf="@+id/divider_home"
+        app:layout_constraintTop_toBottomOf="@+id/text_url" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

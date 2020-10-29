@@ -11,9 +11,4 @@
         android:icon="@drawable/ic_measurements_24dp"
         android:title="@string/title_measurements" />
 
-    <item
-        android:id="@+id/navigation_settings"
-        android:icon="@drawable/ic_settings_24dp"
-        android:title="@string/title_settings" />
-
 </menu>

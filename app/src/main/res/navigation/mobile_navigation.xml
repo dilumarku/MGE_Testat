@@ -17,11 +17,4 @@
         android:label="@string/title_measurements"
         tools:layout="@layout/fragment_measurements" />
 
-    <fragment
-        android:id="@+id/navigation_settings"
-        android:name="ch.ost.rj.mge.testat.fitnessnotes.fragments.SettingsFragment"
-        android:label="@string/title_settings"
-        tools:layout="@layout/fragment_settings" />
-
-
 </navigation>
