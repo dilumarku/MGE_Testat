@@ -10,8 +10,8 @@
     <color name="backgroundColorDay">#FFFFFF</color>
     <color name="textColorDay">#222222</color>
 
-    <color name="colorPrimaryNight">#212121</color>
-    <color name="colorPrimaryVariantNight">#000000</color>
+    <color name="colorPrimaryNight">#6a13cc</color>
+    <color name="colorPrimaryVariantNight">#2e009a</color>
     <color name="colorOnPrimaryNight">#FFFFFF</color>
     <color name="colorSecondaryNight">#000000</color>
     <color name="colorSecondaryVariantNight">#212121</color>
@@ -19,4 +19,11 @@
 
     <color name="backgroundColorNight">#3f3f3f</color>
     <color name="textColorNight">#FFFFFF</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="red">#f40000</color>
+    <color name="green">#00f400</color>
+    <color name="blue">#0000f4</color>
 </resources>

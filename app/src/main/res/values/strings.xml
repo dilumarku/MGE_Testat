@@ -12,6 +12,7 @@
     <string name="compose_add">Add measurement</string>
     <string name="date_text">Date</string>
     <string name="sample_text">Sample Text</string>
+    <string name="BigOr">OR</string>
 
 
 </resources>

@@ -29,11 +29,13 @@ class MeasurementsFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_measurements, container, false)
 
-        root.text_weight.setText("Click the button to track your current weight")
-        root.textView.setText("Click on a date to track your weight on that day")
-
         val simpleCalendarView = root.calendarView
         var formatter = DateTimeFormatter.ofPattern("dd-MMMM-yyyy")
+        val currentDate = LocalDateTime.now()
+
+        root.text_weight.setText("Click the button to track your current weight")
+        root.textView_below_calender.setText("Click on a date to track your weight on that day")
+        root.textView_above_calender.setText("${currentDate.dayOfMonth} ${currentDate.month} ${currentDate.year}" )
 
         simpleCalendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
             var selectedDate = LocalDate.of(year, month+1, dayOfMonth).format(formatter)
@@ -42,12 +44,12 @@ class MeasurementsFragment : Fragment() {
             startActivity(intent)
         }
 
-        val currentDate = LocalDateTime.now().format(formatter)
+
 
         val buttonWeight = root.findViewById<Button>(R.id.buttonWeight)
         buttonWeight.setOnClickListener {
             val intent = Intent(root.context, WeightActivity::class.java)
-            intent.putExtra("date",currentDate )
+            intent.putExtra("date",currentDate.format(formatter) )
             startActivity(intent)
         }
 

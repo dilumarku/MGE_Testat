@@ -5,12 +5,20 @@
         <item name="colorPrimaryVariant">@color/colorPrimaryVariantNight</item>
         <item name="colorOnPrimary">@color/colorOnPrimaryNight</item>
 
-        <item name="colorSecondary">@color/colorSecondaryNight</item>
+        <item name="colorSecondary">@color/colorPrimaryNight</item>
         <item name="colorSecondaryVariant">@color/colorSecondaryVariantNight</item>
         <item name="colorOnSecondary">@color/colorOnSecondaryNight</item>
 
         <item name="android:colorBackground">@color/backgroundColorNight</item>
         <item name="android:textColor">@color/textColorNight</item>
-        <item name="android:statusBarColor">@color/colorPrimaryVariantNight</item>
+        <item name="android:statusBarColor">@color/black</item>
+    </style>
+
+    <style name="BigButton">
+        <item name="backgroundTint">@color/colorPrimaryNight</item>
+        <item name="android:textColor">@color/white</item>"
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline6</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="android:layout_margin">24dp</item>
     </style>
 </resources>
