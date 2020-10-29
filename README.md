@@ -1,5 +1,5 @@
 # Fitness Notes
-Eine kleine App um das Körpergewicht zu tracken und Kotlin auszuprobieren. 
+Eine kleine App um das Körpergewicht zu tracken. 
 
 Folgende Funktionalitäten wurden implementiert:
 - Implementiert in Kotlin
