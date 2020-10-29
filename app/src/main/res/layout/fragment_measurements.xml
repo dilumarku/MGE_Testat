@@ -1,69 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.MeasurementsFragment">
-
-
-    <Button
-        android:id="@+id/buttonWeight"
-        style="@style/BigButton"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/first_measurement"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_below_calender"
-        app:layout_constraintVertical_bias="0.631" />
-
-    <TextView
-        android:id="@+id/text_weight"
-        style="@style/StandardText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/sample_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonWeight"
-        android:layout_marginBottom="@dimen/distance_to_bottom"/>
-
-    <CalendarView
-        android:id="@+id/calendarView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView_above_calender"/>
-
-    <TextView
-        android:id="@+id/textView_below_calender"
-        style="@style/StandardText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/sample_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView"
-        tools:text="TextView" />
-
-    <TextView
-        android:id="@+id/textView_above_button"
-        style="@style/StandardText"
-        android:textSize="50sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/BigOr"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_below_calender"
-        app:layout_constraintBottom_toTopOf="@id/buttonWeight"
-        tools:text="TextView" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".fragments.MeasurementsFragment">
 
     <TextView
         android:id="@+id/textView_above_calender"
@@ -71,8 +12,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/sample_text"
-        app:layout_constraintBottom_toTopOf="@+id/calendarView"
-        app:layout_constraintTop_toTopOf="parent"
         tools:text="TextView" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textView_below_calender"
+        style="@style/StandardText"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="@dimen/distance_between_controls_2x"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sample_text"
+        tools:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView_above_button"
+        style="@style/StandardText"
+        android:layout_marginTop="@dimen/distance_between_controls_4x"
+        android:layout_marginBottom="@dimen/distance_between_controls_4x"
+        android:textSize="50sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/BigOr"
+        tools:text="TextView" />
+
+    <Button
+        android:id="@+id/buttonWeight"
+        style="@style/BigButton"
+        android:layout_marginTop="@dimen/distance_between_controls_2x"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/first_measurement"/>
+
+    <TextView
+        android:id="@+id/text_weight"
+        style="@style/StandardText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sample_text" />
+
+</LinearLayout>
+
