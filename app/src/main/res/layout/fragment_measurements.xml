@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:layout_marginBottom="@dimen/distance_to_bottom"
     tools:context=".fragments.MeasurementsFragment">
 
     <TextView
@@ -81,6 +82,8 @@
         style="@style/StandardText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sample_text" />
+        android:text="@string/sample_text"
+        android:layout_marginBottom="@dimen/distance_to_bottom"
+        />
 
 </LinearLayout>
