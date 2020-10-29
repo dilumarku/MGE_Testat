@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".fragments.MeasurementsFragment">
-
 <LinearLayout
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="@dimen/distance_to_bottom"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView_above_calender"
@@ -23,14 +21,13 @@
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/textView_below_calender"
         style="@style/StandardText"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="@dimen/distance_between_controls_2x"
-        android:paddingHorizontal="100dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/sample_text"
@@ -42,7 +39,7 @@
 
         <View
             android:id="@+id/divider_left"
-            android:layout_width="120dp"
+            android:layout_width="200dp"
             android:layout_height="5dp"
             android:background="?android:attr/listDivider"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -54,8 +51,8 @@
             style="@style/StandardText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/distance_between_controls_4x"
-            android:layout_marginBottom="@dimen/distance_between_controls_4x"
+            android:layout_marginTop="@dimen/distance_between_controls_2x"
+            android:layout_marginBottom="@dimen/distance_between_controls_2x"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -66,7 +63,7 @@
 
         <View
             android:id="@+id/divider_right"
-            android:layout_width="120dp"
+            android:layout_width="200dp"
             android:layout_height="5dp"
             android:background="?android:attr/listDivider"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -87,8 +84,8 @@
         style="@style/StandardText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sample_text" />
+        android:text="@string/sample_text"
+        android:layout_marginBottom="@dimen/distance_to_bottom"/>
 
 </LinearLayout>
-
 </androidx.core.widget.NestedScrollView>
