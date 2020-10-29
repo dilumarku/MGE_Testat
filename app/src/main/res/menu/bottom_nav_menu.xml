@@ -12,8 +12,8 @@
         android:title="@string/title_measurements" />
 
     <item
-        android:id="@+id/navigation_workouts"
-        android:icon="@drawable/ic_workouts_24dp"
-        android:title="@string/title_workouts" />
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_settings_24dp"
+        android:title="@string/title_settings" />
 
 </menu>

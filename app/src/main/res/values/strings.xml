@@ -2,7 +2,7 @@
     <string name="app_name">Fitness Notes</string>
     <string name="title_home">Home</string>
     <string name="title_measurements">Measurements</string>
-    <string name="title_workouts">Workouts</string>
+    <string name="title_settings">Settings</string>
     <string name="github_url">&gt;&gt; GitHub Repository &lt;&lt; </string>
     <string name="first_measurement">Weight</string>
     <string name="second_measurement">Chest</string>

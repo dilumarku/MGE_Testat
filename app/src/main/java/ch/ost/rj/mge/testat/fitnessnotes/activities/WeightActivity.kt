@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ch.ost.rj.mge.testat.fitnessnotes.R
-import ch.ost.rj.mge.testat.fitnessnotes.activities.ComposeActivity
 import ch.ost.rj.mge.testat.fitnessnotes.adapter.MeasurementAdapter
 import ch.ost.rj.mge.testat.fitnessnotes.adapter.MeasurementViewHolder
 import ch.ost.rj.mge.testat.fitnessnotes.model.MeasurementRepository
@@ -25,7 +24,7 @@ class WeightActivity : AppCompatActivity() {
 
         val extras = this.intent.extras
 
-        this.picked_date.setText("You picked the date "+ extras!!.getString("date"))
+        this.picked_date.text = "You picked the date "+ extras!!.getString("date")
 
         val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(this)
         adapter = MeasurementAdapter(MeasurementRepository.measurements)

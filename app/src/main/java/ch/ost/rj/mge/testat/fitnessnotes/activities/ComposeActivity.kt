@@ -58,7 +58,7 @@ class ComposeActivity : AppCompatActivity() {
         notesEditText = compose_edittext_notes
 
         addButton = compose_button_add
-        addButton.setOnClickListener(View.OnClickListener { v: View? -> confirmMeasurement()})
+        addButton.setOnClickListener(View.OnClickListener { _ -> confirmMeasurement()})
 
         updateAddButton()
     }
@@ -78,7 +78,7 @@ class ComposeActivity : AppCompatActivity() {
             measurementEditText.text.toString() + " kg",
             notesEditText.text.toString()
         )
-        //VibrationService.vibrateSuccess()
+
         MeasurementRepository.addMeasurement(measurement)
         finish()
         Toast.makeText(this, "Measurement successfully added", Toast.LENGTH_LONG).show()
